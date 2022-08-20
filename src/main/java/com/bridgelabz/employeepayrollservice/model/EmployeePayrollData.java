@@ -1,4 +1,4 @@
-package com.bridgelabz.employeepayrollservice.Service;
+package com.bridgelabz.employeepayrollservice.model;
 
 import com.bridgelabz.employeepayrollservice.dto.EmployeePayrollDTO;
 

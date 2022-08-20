@@ -1,6 +1,6 @@
 package com.bridgelabz.employeepayrollservice.controller;
 
-import com.bridgelabz.employeepayrollservice.Service.EmployeePayrollData;
+import com.bridgelabz.employeepayrollservice.model.EmployeePayrollData;
 import com.bridgelabz.employeepayrollservice.dto.EmployeePayrollDTO;
 import com.bridgelabz.employeepayrollservice.dto.ResponseDto;
 import org.springframework.http.HttpStatus;
