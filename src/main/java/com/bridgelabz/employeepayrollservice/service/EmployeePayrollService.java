@@ -22,7 +22,7 @@ public class EmployeePayrollService implements IEmployeePayrollService{
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData = null;
-        employeePayrollData = new EmployeePayrollData(1,employeePayrollDTO);
+        employeePayrollData = new EmployeePayrollData(employeePayrollList.size()-1,employeePayrollDTO);
         employeePayrollList.add(employeePayrollData);
         return employeePayrollData;
     }

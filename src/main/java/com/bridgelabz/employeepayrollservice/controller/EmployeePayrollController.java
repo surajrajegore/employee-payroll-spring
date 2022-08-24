@@ -22,14 +22,14 @@ public class EmployeePayrollController {
     public ResponseEntity<ResponseDto> getEmployeePayrollData(){
         List<EmployeePayrollData> empDataList = null;
         empDataList = employeePayrollService.getEmployeePayrollData();
-        ResponseDto responseDTO = new ResponseDto("Get Call Sucess",empDataList);
+        ResponseDto responseDTO = new ResponseDto("Get Call Success.",empDataList);
         return new ResponseEntity<ResponseDto>(responseDTO, HttpStatus.OK);
     }
 
     @GetMapping("/get/{empId}")
     public ResponseEntity<ResponseDto> getEmployeePayrollData(@PathVariable("empId")int empId){
         EmployeePayrollData employeePayrollData = employeePayrollService.getEmployeePayrollDataById(empId);
-        ResponseDto responseDTO = new ResponseDto("Get Call For ID Sucessful",employeePayrollData);
+        ResponseDto responseDTO = new ResponseDto("Get Call For ID Successful.",employeePayrollData);
         return new ResponseEntity<ResponseDto>(responseDTO, HttpStatus.OK);
     }
 
@@ -38,14 +38,14 @@ public class EmployeePayrollController {
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> addEmployeePayrollData(@RequestBody EmployeePayrollDTO empPayrollDTO){
        EmployeePayrollData employeePayrollData = employeePayrollService.createEmployeePayrollData(empPayrollDTO);
-        ResponseDto responseDTO = new ResponseDto("Created Employee Payroll Data Successfully:", employeePayrollData);
+        ResponseDto responseDTO = new ResponseDto("Created Employee Payroll Data Successfully.", employeePayrollData);
         return new ResponseEntity<ResponseDto>(responseDTO, HttpStatus.OK);
     }
 
     @PutMapping("/update/{empId}")
     public ResponseEntity<ResponseDto> updateEmployeePayrollData(@PathVariable("empId") int empId, @RequestBody EmployeePayrollDTO empPayrollDTO){
         EmployeePayrollData employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId, empPayrollDTO);
-        ResponseDto responseDTO = new ResponseDto(" data updated Employee Payroll Data Successfully:", employeePayrollData);
+        ResponseDto responseDTO = new ResponseDto(" data updated Employee Payroll Data Successfully.", employeePayrollData);
         return new ResponseEntity<ResponseDto>(responseDTO, HttpStatus.OK);
     }
 
