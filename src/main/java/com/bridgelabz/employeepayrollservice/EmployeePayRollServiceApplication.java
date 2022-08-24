@@ -13,8 +13,8 @@ public class EmployeePayRollServiceApplication {
         System.out.println("welcome to employee payroll");
         ApplicationContext context = SpringApplication.run(EmployeePayRollServiceApplication.class, args);
 
-        log.info("Employee payroll Started in envornmet",context.getEnvironment().getProperty("environment"));
-        log.info("Employee Payroll DB User name is ", context.getEnvironment().getProperty("spring.datasource.username"));
+        log.info("Employee payroll Started in {} environment", context.getEnvironment().getProperty("environment"));
+        log.info("Employee Payroll DB User name is {} ", context.getEnvironment().getProperty("spring.datasource.username"));
     }
 
 }
