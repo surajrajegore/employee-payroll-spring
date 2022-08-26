@@ -1,7 +1,7 @@
 package com.bridgelabz.employeepayrollservice.service;
 
 import com.bridgelabz.employeepayrollservice.dto.EmployeePayrollDTO;
-import com.bridgelabz.employeepayrollservice.model.EmployeePayrollData;
+import com.bridgelabz.employeepayrollservice.entity.EmployeePayrollData;
 
 import java.util.List;
 

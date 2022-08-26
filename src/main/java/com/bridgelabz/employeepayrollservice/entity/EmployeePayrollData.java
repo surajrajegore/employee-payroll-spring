@@ -1,14 +1,19 @@
-package com.bridgelabz.employeepayrollservice.model;
+package com.bridgelabz.employeepayrollservice.entity;
 
 import com.bridgelabz.employeepayrollservice.dto.EmployeePayrollDTO;
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 @Data
 public class EmployeePayrollData {
 
     private  int employeeId;
     private String name;
     private long salary;
+    private Long id;
 
     public EmployeePayrollData() {
     }
@@ -20,4 +25,12 @@ public class EmployeePayrollData {
     }
 
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
+    }
 }
