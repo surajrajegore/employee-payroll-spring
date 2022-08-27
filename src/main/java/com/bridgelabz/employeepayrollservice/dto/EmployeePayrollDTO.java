@@ -13,7 +13,7 @@ public @ToString class EmployeePayrollDTO {
     @Min(value = 500,message = "salary must be above 500")
     public  long salary;
 
-    @Pattern(regexp = "male|female",message = "Gender needs to be male or female")
+    @Pattern(regexp = "m|f",message = "Gender needs to be m or f")
     public String gender;
 
     @PastOrPresent

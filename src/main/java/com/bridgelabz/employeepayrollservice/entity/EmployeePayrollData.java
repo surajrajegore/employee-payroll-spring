@@ -3,25 +3,32 @@ package com.bridgelabz.employeepayrollservice.entity;
 import com.bridgelabz.employeepayrollservice.dto.EmployeePayrollDTO;
 import lombok.Data;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-
+@Table(name = "employee_payroll")
 public @Data class EmployeePayrollData {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Employee_id")
     private  int employeeId;
+    @Column(name = "name")
     private String name;
+    @Column(name ="salary")
     private long salary;
+    @Column(name = "gender")
     private String gender;
+    @Column(name="startDate")
     private LocalDate startDate;
+    @Column(name="note")
     private String note;
+    @Column(name="profilePic")
     private String profilePic;
     @ElementCollection
+    @CollectionTable(name = "employee_department",joinColumns = @JoinColumn(name = "id"))
     private List<String> departments;
 
     public EmployeePayrollData(){
